@@ -1,27 +1,30 @@
+<!doctype html>
 <html lang="en">
   <head>
+    <meta charset="utf-8">
+    <meta name=”viewport” content=”width=device-width, initial-scale=1″>
     <title>Ask an expert</title>
     <link rel="stylesheet" href="stylesheet/main.css">
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   </head>
   <body>
 
-
-
-    <div class="ask-an-expert">
+    <main class="ask-an-expert">
 
       <!-- Page 1 - Landing -->
-      <div class="ask-an-expert-landing">
-        <div class="section-wrapper">
+      <section class="ask-an-expert-landing">
+        <header class="section-wrapper">
             <h1>Not what you expected?</h1>
             <a href="#ask-an-expert-form" class="ask-an-expert__link">Ask an expert</a>
-        </div>
+        </header>
         <hr class="header-ln">
-      </div>
+      </section>
 
       <!-- Page 2 - Form -->
-      <div class="ask-an-expert-form">
-        <h1>Ask an expert</h1>
+      <section class="ask-an-expert-form">
+        <header>
+          <h1>Ask an expert</h1>
+        </header>
         <div class="section-wrapper"> 
           <div class="expert-imgs"></div>
           <span class="expert-name"></span>
@@ -29,31 +32,30 @@
         <form>
           <div>
             <p class="form-label">What you search for</p>
-            <input type="text" class="search-input" value="" class="search-input"></input>
+            <input type="text" class="search-input" value="" class="search-input" disabled/>
           </div>  
           <div>
             <p class="form-label">Can you explain in a little more detail?</p>
             <textarea class="detail-input" placeholder="Message for expert" ></textarea>
           </div>
-          <span class="form-validation">Fields cannot be empty</span>
           <div>
             <button type="cancel" class="round-button cancel-button" value="Cancel">Cancel</button>
             <button type="submit" class="round-button send-button" value="Submit">Send</button>
+            <label class="form-validation">Please provide more detail.</label>
           </div>
         </form>
-      </div>
+      </section>
 
       <!-- Page 3 - Thank you -->
-      <div class="ask-an-expert-thank-you">
-        <h1>Thank you.</h1>
-        <p>An expert will get back to you soon</p>
+      <section class="ask-an-expert-thank-you">
+        <header>
+          <h1>Thank you.</h1>
+        </header>
+        <p>An expert will get back to you soon.</p>
         <hr class="header-ln">
-      </div>
-    </div>
+      </section>
 
-
-
-
+    </main>
     <script src="js/scripts.js"></script>
   </body>
 </html>

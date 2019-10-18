@@ -1,48 +1,71 @@
+@import url('https://rsms.me/inter/inter.css');
+
+:root {
+    --main-bg-color: #F0F4F9;
+    --blue-color: #2E75F0;
+    --grey-color: #777E8B;
+    --black-color: #000;
+    --active-blue-color: #204871;
+    --validation-color: red;
+    --avator-bg-color: #48D1E0;
+    --avator-letter-size: 32px;
+    --white-color: #fff;
+    --default-font-family: 'Inter var', sans-serif;
+    --header-font: 20px;
+    --large-font: 16px;
+    --medium-font: 14px;
+    --small-font: 12px;
+    --extra-small-font: 11px;
+    --line-color: #DBDFE7;
+    --form-border: 1px solid #E6E6E6;
+  }
+
+
+/* Global Styling */
 * {
-  box-sizing: border-box;
-}
-body{
-    background-color: #F0F4F9;
+    box-sizing: border-box;
+  }
+
+body {
+    background-color: var(--main-bg-color);
 }
 
 a {
-    color: #2E75F0;
+    color: var(--blue-color);
     text-decoration: none;
 }
 
 a:hover {
-    color: #204871;
+    color: var(--active-blue-color);
     text-decoration: underline;
 }
 
-/* Shared Styling */
-
+/* Ask an Expert Styling */
 .ask-an-expert {
-    width: 648px; /*40.5em*/
-    height: 446px; /*27.875em*/
-    font-size: 16px;
-    font-family: 'Verdana';
-    background-color: #FFF;
-    color: #000;
+    font-family: var(--default-font-family);
+    font-size: var(--medium-font); 
+    background-color: var(--white-color);
+    color: var(--black-color);
+    width: 648px;
+    height: 446px; 
     position: relative;
 }
 
 .ask-an-expert-thank-you, .ask-an-expert-form, .ask-an-expert-landing {
-    padding: 24px 24px; /*1.5x1.5em I am changing it to 24x24 to create consistency throughout views, in a real life situation, I would check with the designer first*/
-    font-size: 14px; /* .875em */
+    padding: 24px 24px; 
 }
 
-.ask-an-expert h1{
+.ask-an-expert h1 {
+    font-size: var(--header-font);
     margin: 0;
     margin-right: 24px;
-    font-size: 20px; /*1.25*/
     line-height: 24px;
 }
 
-.ask-an-expert hr{
+.ask-an-expert hr {
+    position: absolute;
     margin-top: 12px;
     width: 100%;
-    position: absolute;
     left: 0;
 }
 
@@ -54,94 +77,100 @@ a:hover {
 }
 
 .header-ln {
-    border-top: 0.0625em solid #DBDFE7; /*1*/
+    border-top: 0.0625em solid var(--line-color); 
 }
 
-/* Images of Experts*/
+/* Landing Page */
+.ask-an-expert__link{
+    font-size: var(--small-font);
+}
+
+/* Form Page */
+/* Form Page - Images */
 .expert-imgs {
-    margin-right: 20px; /*1.25*/
+    position: relative;
+    margin-right: 20px; 
     margin-top: 16px;
-    margin-bottom: 32px; /*2.125*/
+    margin-bottom: 20px; 
     width: 120px;
     height: 56px;
-    position: relative;
 }
 
 .expert-img, .img-does-not-exist {
-    border-radius: 50%;
-    width: 56px; /* 3.5 */
-    height: 56px;
     position: absolute;
+    border-radius: 50%;
+    width: 56px; 
+    height: 56px;
 }
 
-/* Images of Experts - overlap effect */
-.img-position-0{
+.img-position-0 {
     left: 0px;
 }
-.img-position-1{
+.img-position-1 {
     left: 35px;
 }
-.img-position-2{
+.img-position-2 {
     left: 70px;
 }
 
-.img-does-not-exist{
-    background-color: #48D1E0;
+.img-does-not-exist {
+    background-color: var(--avator-bg-color);
+    font-size: var(--avator-letter-size);
+    color: var(--white-color);
     text-transform: uppercase;
-    display:flex;
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: #fff;
     font-weight: 800;
 }
 
-
-/* Form */
-
-.form-validation{
-    color: red;
-    display: none
+/* Form Page - Form Styling */
+.form-validation {
+    color: var(--validation-color);
+    display: inline;
+    margin-left: 24px;
 }
 
-/* Form - Label */
 .form-label {
-    margin-bottom: 12px; /*.5em*/
+    font-size: var(--large-font);
 }
 
-/* Form Input */
-.search-input, .detail-input{
+.search-input, .detail-input {
+    font-size: var(--medium-font);
+    border: var(--form-border:);
     width: 100%;
-    border: 1px solid #E6E6E6;
     border-radius: 2px;
-    padding: 12px; /* .75 */
-    font-size: 14px;/*0.875*/
-    margin-bottom: 24px;
-    box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3);
+    padding: 12px; 
+    margin-bottom: 12px;
 }
 
 .search-input {
-    height: 40px; /*40*/
+    height: 40px; 
     background: url("../assets/searchIcon.png") no-repeat;
     background-position: 8px 50%;
     padding-left: 32px;
 }
+
 .detail-input {
-    height: 80px; /*80*/
+    height: 80px; 
 }
 
+.detail-input::placeholder {
+    color: var(--grey-color); 
+}
 
-/* Form Buttons */
+/* Form Page - Buttons */
 .round-button {
-    border-radius: 16px; /*1*/
-    padding: 8px 24px; /* .5em 1.5em */
-    font-size: 12px;
+    font-size: var(--small-font);
+    border-radius: 16px;
+    padding: 8px 24px; 
     border: none;
 }
 
 .send-button{
-    background-color: #2E75F0;
-    color: #fff;
+    background-color: var(--blue-color);
+    color: var(--white-color);
     margin-left: 16px;
 }
 
@@ -151,11 +180,10 @@ a:hover {
 }
 
 .send-button:hover {
-    background-color: #204871;
+    background-color: var(--active-blue-color);
 }
 
-
-/* Thank you view */
+/* Thank You Page */
 .ask-an-expert-thank-you p{
-    color: #777E88;
+    color: var(--grey-color);
 }
