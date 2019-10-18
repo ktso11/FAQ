@@ -1,0 +1,161 @@
+* {
+  box-sizing: border-box;
+}
+body{
+    background-color: #F0F4F9;
+}
+
+a {
+    color: #2E75F0;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #204871;
+    text-decoration: underline;
+}
+
+/* Shared Styling */
+
+.ask-an-expert {
+    width: 648px; /*40.5em*/
+    height: 446px; /*27.875em*/
+    font-size: 16px;
+    font-family: 'Verdana';
+    background-color: #FFF;
+    color: #000;
+    position: relative;
+}
+
+.ask-an-expert-thank-you, .ask-an-expert-form, .ask-an-expert-landing {
+    padding: 24px 24px; /*1.5x1.5em I am changing it to 24x24 to create consistency throughout views, in a real life situation, I would check with the designer first*/
+    font-size: 14px; /* .875em */
+}
+
+.ask-an-expert h1{
+    margin: 0;
+    margin-right: 24px;
+    font-size: 20px; /*1.25*/
+    line-height: 24px;
+}
+
+.ask-an-expert hr{
+    margin-top: 12px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+}
+
+.section-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-items: center; 
+}
+
+.header-ln {
+    border-top: 0.0625em solid #DBDFE7; /*1*/
+}
+
+/* Images of Experts*/
+.expert-imgs {
+    margin-right: 20px; /*1.25*/
+    margin-top: 16px;
+    margin-bottom: 32px; /*2.125*/
+    width: 120px;
+    height: 56px;
+    position: relative;
+}
+
+.expert-img, .img-does-not-exist {
+    border-radius: 50%;
+    width: 56px; /* 3.5 */
+    height: 56px;
+    position: absolute;
+}
+
+/* Images of Experts - overlap effect */
+.img-position-0{
+    left: 0px;
+}
+.img-position-1{
+    left: 35px;
+}
+.img-position-2{
+    left: 70px;
+}
+
+.img-does-not-exist{
+    background-color: #48D1E0;
+    text-transform: uppercase;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-weight: 800;
+}
+
+
+/* Form */
+
+.form-validation{
+    color: red;
+    display: none
+}
+
+/* Form - Label */
+.form-label {
+    margin-bottom: 12px; /*.5em*/
+}
+
+/* Form Input */
+.search-input, .detail-input{
+    width: 100%;
+    border: 1px solid #E6E6E6;
+    border-radius: 2px;
+    padding: 12px; /* .75 */
+    font-size: 14px;/*0.875*/
+    margin-bottom: 24px;
+    box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.search-input {
+    height: 40px; /*40*/
+    background: url("../assets/searchIcon.png") no-repeat;
+    background-position: 8px 50%;
+    padding-left: 32px;
+}
+.detail-input {
+    height: 80px; /*80*/
+}
+
+
+/* Form Buttons */
+.round-button {
+    border-radius: 16px; /*1*/
+    padding: 8px 24px; /* .5em 1.5em */
+    font-size: 12px;
+    border: none;
+}
+
+.send-button{
+    background-color: #2E75F0;
+    color: #fff;
+    margin-left: 16px;
+}
+
+.cancel-button{
+    background-color: #EAEDF2;
+    color: #1C2330;
+}
+
+.send-button:hover {
+    background-color: #204871;
+}
+
+
+/* Thank you view */
+.ask-an-expert-thank-you p{
+    color: #777E88;
+}
